@@ -584,7 +584,7 @@ const windowControl = {
             } else {
               windowControl.windowMap['game'].webContents.send(
                 'load-url',
-                `https://localhost:${sererHttps.address().port}/0/`
+                `https://localhost:${sererHttps.address().port}/`
               )
             }
             break

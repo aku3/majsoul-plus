@@ -1,33 +1,33 @@
 {
   "name": "majsoul-plus-client",
   "version": "1.12.0-beta.4",
-  "productName": "Majsoul Plus",
+  "productName": "Majsoul Plus EN",
   "author": "MajsoulPlus Team",
-  "description": "Majsoul Plus",
+  "description": "Majsoul Plus EN",
   "main": "index.js",
   "scripts": {
     "start": "concurrently --success \"first\" --kill-others \"gulp\" \"cross-env NODE_ENV=development electron . --enable_logging\"",
     "pack": "npm run lint && npm run build",
     "lint": "standard --fix | snazzy",
     "build": "npm run build-win32 && npm run build-linux && npm run build-darwin",
-    "build-win32": "gulp sass && electron-packager . Majsoul_Plus  --platform=win32 --arch=all --out ./build/unpacked --ignore=build --overwrite --icon=bin/icons/icon.ico",
-    "build-linux": "gulp sass && electron-packager . Majsoul_Plus  --platform=linux --arch=all --out ./build/unpacked --ignore=build --overwrite --icon=bin/icons/icon.png",
+    "build-win32": "gulp sass && electron-packager . Majsoul_Plus_EN  --platform=win32 --arch=x64 --out ./build/unpacked --ignore=build --overwrite --icon=bin/icons/icon.ico",
+    "build-linux": "gulp sass && electron-packager . Majsoul_Plus_EN  --platform=linux --arch=all --out ./build/unpacked --ignore=build --overwrite --icon=bin/icons/icon.png",
     "build-darwin": "gulp sass && electron-builder --mac",
     "test": "echo \"Error: no test specified\""
   },
   "build": {
-    "productName": "Majsoul Plus",
+    "productName": "Majsoul Plus EN",
     "directories": {
       "output": "build/packed"
     },
     "mac": {
       "icon": "bin/icons/icon.icns",
       "asar": false,
-      "artifactName": "Majsoul_Plus-${platform}-${arch}.${ext}",
+      "artifactName": "Majsoul_Plus_EN-${platform}-${arch}.${ext}",
       "darkModeSupport": true
     },
     "dmg": {
-      "artifactName": "Majsoul_Plus-${platform}-${arch}.${ext}"
+      "artifactName": "Majsoul_Plus_EN-${platform}-${arch}.${ext}"
     }
   },
   "standard": {

@@ -32,19 +32,19 @@ class Ping {
 
   _getVersion () {
     const url = this._getRandomUrl(
-      'https://majsoul.union-game.com/0/version.json'
+      'http://mahjongsoul.game.yo-star.com/version.json'
     )
     return NetworkUtil.getJson(url).then(res => res.version)
   }
 
   _getResVersion (version) {
-    const originUrl = `https://majsoul.union-game.com/0/resversion${version}.json`
+    const originUrl = `http://mahjongsoul.game.yo-star.com/resversion${version}.json`
     const url = this._getRandomUrl(originUrl)
     return NetworkUtil.getJson(url).then(res => res.res['config.json'].prefix)
   }
 
   _getConfig (prefix) {
-    const originUrl = `https://majsoul.union-game.com/0/${prefix}/config.json`
+    const originUrl = `http://mahjongsoul.game.yo-star.com/${prefix}/config.json`
     const url = this._getRandomUrl(originUrl)
     return NetworkUtil.getJson(url).then(res => res.ip)
   }

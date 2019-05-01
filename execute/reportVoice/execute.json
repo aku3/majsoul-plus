@@ -1,7 +1,7 @@
 {
-  "name": "解锁所有语音",
+  "name": "Unlock all voices",
   "author": "Majsoul Plus Team",
-  "description": "可以在本地解锁全部报番型、主菜单交互语音。\n让您获得完整麻将体验。",
+  "description": "Unlocks all your character's voice lines locally.",
   "entry": "script.js",
   "executePreferences": {
     "document": false,

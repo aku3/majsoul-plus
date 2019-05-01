@@ -100,11 +100,11 @@ saveAndInstall.addEventListener('click', event => {
   const description = document.getElementById('description').value
   const dirPath = path.join(__dirname, '../../', config.MODS_DIR, dirName)
   if (dirName.length < 4) {
-    alert('文件夹名长度过短')
+    alert('The folder name is too short.')
     return
   }
   if (name.length === 0) {
-    alert('Mod名称不能为空')
+    alert('The mod name cannot be empty.')
     return
   }
   const stat = (() => {
@@ -115,7 +115,7 @@ saveAndInstall.addEventListener('click', event => {
     }
   })()
   if (stat) {
-    alert('文件夹名称已存在！')
+    alert('The folder name already exists!')
     return
   }
   fs.mkdirSync(dirPath)
@@ -129,11 +129,11 @@ saveAndInstall.addEventListener('click', event => {
     replace: [
       {
         from:
-          '/0/[^/]+/scene/Assets/Resource/tablecloth/tablecloth_default/Table_Dif.jpg',
+          '/[^/]+/scene/Assets/Resource/tablecloth/tablecloth_default/Table_Dif.jpg',
         to: '/Table_Dif.jpg'
       },
       {
-        from: '/0/[^/]+/myres2/tablecloth/tablecloth_default/preview.jpg',
+        from: '/[^/]+/en/myres2/tablecloth/tablecloth_default/preview.jpg',
         to: '/preview.jpg'
       }
     ]
@@ -173,6 +173,6 @@ saveAndInstall.addEventListener('click', event => {
       )
     )
   ]).then(() => {
-    alert('已保存！\n请刷新模组后启用')
+    alert('Saved!\nPlease refresh and enable the mod.')
   })
 })
